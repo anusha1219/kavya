@@ -1,0 +1,26 @@
+import re
+myfile = open("test.txt",'r')
+contents = myfile.readlines()
+#re.findall(r"CREATE TABLE.*",contents)
+final=[]
+temp = []
+a= ""
+create_cnt = 0
+end_cnt = 0
+for ind,line in enumerate(contents,1):
+
+    #print ind,line
+    if create_cnt==end_cnt:
+        a= re.compile(r"CREATE TABLE.*")
+        if re.findall(a, line):
+            print "in create regex"
+            print ind
+            create_cnt+=1;
+            temp.append(line)
+    else:
+        a = re.compile(r".*;$")
+        if re.findall(a,line):
+            end_cnt+=1
+        else:
+            temp.append(line);
+    print temp;
