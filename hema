@@ -24,3 +24,6 @@ for ind,line in enumerate(contents,1):
         else:
             temp.append(line);
 print temp;
+f= open("res.txt","w")
+f.writelines(temp)
+f.close()
