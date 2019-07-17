@@ -23,4 +23,4 @@ for ind,line in enumerate(contents,1):
             end_cnt+=1
         else:
             temp.append(line);
-    print temp;
+print temp;
