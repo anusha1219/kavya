@@ -1,0 +1,10 @@
+Follow these commands to create a Keytab
+$ ktutil
+ktutil:  addent -password -p <badge>@MYREALM.COM -k 1 -e arcfour-hmac
+Password for <badge>@MYREALM.COM:
+ktutil:  wkt <badge>.keytab
+ktutil:  q
+
+
+
+kinit hive@MYREALM.COM -kt hive.keytab
