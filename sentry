@@ -1,0 +1,17 @@
+create role test_role;
+
+grant role test_role to group datadojo;
+
+grant select on database amla to role test_role;
+
+revoke select on database amla from role test_role;
+
+drop role test_role;
+
+SHOW ROLES;
+
+SHOW ROLE GRANT GROUP datadojo;
+
+SHOW GRANT ROLE test_role;
+
+https://docs.cloudera.com/documentation/enterprise/latest/topics/sg_hive_sql.html#show_statement
